@@ -1,0 +1,721 @@
+{
+  "originUrl": "https://www.tenneco.com",
+  "lastCrawled": "https://www.tenneco.com/",
+  "urls": [
+    {
+      "url": "https://www.tenneco.com/",
+      "source": "CRAWL",
+      "targetPath": "/",
+      "id": "0adc0d556bb5cf262db2a0942dcf180d89a89ba9"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us",
+      "source": "CRAWL",
+      "targetPath": "/about-us",
+      "id": "1fd831729693df6fbb662d77d1d53fa6cb56f759"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors",
+      "id": "de7e192e9484dfe25460cb9acdb4e3f09ec5fc91"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/carletta-ooton",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/carletta-ooton",
+      "id": "1257afafe0175f58ae5bad447961fb7857a6eb49"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/chris-christie",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/chris-christie",
+      "id": "bd7e92a9eb3d1557b52d163b2af1b902a5eadd99"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/hari-nair",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/hari-nair",
+      "id": "d286ddecb2023712880d22b96b1584d8f8eebad1"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/jeneanne-hanley",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/jeneanne-hanley",
+      "id": "3a664365177fee453e88bdbd5dcc8a374f2a59d2"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/jim-voss",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/jim-voss",
+      "id": "4b0bc1fb85e41a0acd2429e98f886e6a3afefbcd"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/michael-reiss",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/michael-reiss",
+      "id": "35ffd3a47744c7da8685d01817c03017ebc9c98a"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/noah-falk",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/noah-falk",
+      "id": "3c68c41132de412ec87815da4e664894fd226810"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/pierre-vareille",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/pierre-vareille",
+      "id": "1fa81f909cfb37a80c46822c667d65ce40c56da8"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/richard-dennis",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/richard-dennis",
+      "id": "bbee37629d4cc5d1960455aabc849bca7dc81c15"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/shahid-bosan",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/shahid-bosan",
+      "id": "7632e3a556fa5d6397578a6fcf8b39ce98de8fc9"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/board-of-directors/tracey-byrne",
+      "source": "CRAWL",
+      "targetPath": "/about-us/board-of-directors/tracey-byrne",
+      "id": "e830abd83a025b187e2e414105708d7e70b4a4b1"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/code-of-conduct",
+      "source": "CRAWL",
+      "targetPath": "/about-us/code-of-conduct",
+      "id": "33354e5f94d7126e5efe303db346a9b527e76295"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/financial-managers-code-of-conduct",
+      "source": "CRAWL",
+      "targetPath": "/about-us/financial-managers-code-of-conduct",
+      "id": "6c61f69d021a7e11f172595e9e1fa1fe7136534a"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-customers",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-customers",
+      "id": "8e114fdabd9181d264b3caca7dabf92d6af8c6c7"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership",
+      "id": "1540a66034ccf5b90f79c68416b78125b1faa1fa"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/arvind-chandra",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/arvind-chandra",
+      "id": "d9c636e46fa67e76955a12f803e8cc6b9682194d"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/chintan-sopariwala",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/chintan-sopariwala",
+      "id": "bf7682d5c25b5b64fa44e32f2e695170ad2503d7"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/edward-yocum",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/edward-yocum",
+      "id": "c5d44dccda9f3adbbb282743c1ab6658bf42bc6a"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/jim-voss",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/jim-voss",
+      "id": "565cc27759c8d300810cf98ae97e79878d76beae"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/jon-bagrosky",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/jon-bagrosky",
+      "id": "0c95f29edfd1b43179c4c33c73ea87a270c1feb6"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/manavendra-sial",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/manavendra-sial",
+      "id": "ba14acd08ff4074161704536b582ae92eca5cfa9"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/nathan-bowen",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/nathan-bowen",
+      "id": "ead2c05a32351bcca85e3f7dea8c33f6833e1643"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/prakash--cash--mahesh",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/prakash-cash-mahesh",
+      "id": "8c165de219a69e36bb1a2856e503c2ad497ef54c"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/rishi-verma",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/rishi-verma",
+      "id": "00dd36c7f7a346330e86e023a01589ef4544a446"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/sean-li",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/sean-li",
+      "id": "a9b96cad2ebc446e51239322fff849530ba4de9a"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-leadership/tyler-best",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-leadership/tyler-best",
+      "id": "731c8011f25ce1b685a53b96bf5f23db7c851927"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/our-story",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-story",
+      "id": "e05282d467f8d16b121cd9ba71da8b507b3fda1e"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability",
+      "id": "d5dcf4fb8bf88f85bf6daadc9ec3e5424a5a55d3"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/audit-committee",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/audit-committee",
+      "id": "972132a50c0cea666f2dc3ee49e8f3cac83a0467"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/conflict-minerals",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/conflict-minerals",
+      "id": "8e2f14c7a6326dd35f42c0d31ad2c3291a8433c8"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/environment-health-and-safety/gliwice-poland-safety-measures",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/environment-health-and-safety/gliwice-poland-safety-measures",
+      "id": "00f66a309f84cbce57b0105d8e7e4805fac90c4e"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/environment-health-and-safety/hazardous-incident-ordinance",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/environment-health-and-safety/hazardous-incident-ordinance",
+      "id": "439953c14b5936e026f6675f4a5b656833e716bc"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/modern-slavery-and-human-trafficking",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/modern-slavery-and-human-trafficking",
+      "id": "4352576752498d4cf0ee101bf41b4fde78c2fc17"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/ontario-toxic-reduction-act",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/ontario-toxic-reduction-act",
+      "id": "87da4f8b24a5f5d74b54c78a4e76ba180ee42bc1"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/quality-commitment",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/quality-commitment",
+      "id": "658632aee28fe089c1edcc6efbf09abbf1bd68b0"
+    },
+    {
+      "url": "https://www.tenneco.com/about-us/sustainability/worker-health-and-safety",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability/worker-health-and-safety",
+      "id": "c0cc1a228a4d02225cee4775e8da800594a32390"
+    },
+    {
+      "url": "https://www.tenneco.com/careers",
+      "source": "CRAWL",
+      "targetPath": "/careers",
+      "id": "9e4140fb6fd849ed2ba8c27ed75c72da5ecb6c94"
+    },
+    {
+      "url": "https://www.tenneco.com/careers/life-at-tenneco",
+      "source": "CRAWL",
+      "targetPath": "/careers/life-at-tenneco",
+      "id": "3e88999b6d9aff62042d2e45f494e9c97abb7749"
+    },
+    {
+      "url": "https://www.tenneco.com/careers/why-tenneco",
+      "source": "CRAWL",
+      "targetPath": "/careers/why-tenneco",
+      "id": "0e3a964afef241a6993ea1f82d9597d61420a7d8"
+    },
+    {
+      "url": "https://www.tenneco.com/contact-us",
+      "source": "CRAWL",
+      "targetPath": "/contact-us",
+      "id": "4c124fe03e400de2c04b74dde373a34cb815bcd5"
+    },
+    {
+      "url": "https://www.tenneco.com/contact-us/find-a-location",
+      "source": "CRAWL",
+      "targetPath": "/contact-us/find-a-location",
+      "id": "c01bd42c559c5b59f42de7104b82193be6d539ac"
+    },
+    {
+      "url": "https://www.tenneco.com/governance",
+      "source": "CRAWL",
+      "targetPath": "/governance",
+      "id": "9340a5590d68d5f5f1894c038578dd8791fcd765"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features",
+      "id": "14bc637a50ce8664fc0d5df7d2d4b8de19041672"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/features",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/features",
+      "id": "146aed519567f82619c1c0ee0d599b349fb9e7e4"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom",
+      "id": "42c85461278175c6fb655ca65ab8eca67643728f"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/archive",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/archive",
+      "id": "bb2f930db0606546fefee0b510cb969c095e360f"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news",
+      "id": "e2d689402510da4e5b33bc5a6a66eb6a0f2a3802"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2024/10/has-your-dashboard-hula-figurine-stopped-dancing-monroe-ride-solutions-happily-accepts-the-blame",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2024/10/has-your-dashboard-hula-figurine-stopped-dancing-monroe-ride-solutions-happily-accepts-the-blame",
+      "id": "44edb1b4ce051590f8843d82bdec7e4ff5d627b4"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2024/10/monroe-introduces-new-heavy-duty-chassis-a-new-line-of-drag-links-and-tie-rods-engineered-for-performance",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2024/10/monroe-introduces-new-heavy-duty-chassis-a-new-line-of-drag-links-and-tie-rods-engineered-for-performance",
+      "id": "e56456ede5df44606e964ef901ea8cd7ecde00b7"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2024/10/moog-unveils-new-constant-velocity-axles",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2024/10/moog-unveils-new-constant-velocity-axles",
+      "id": "ffb4d3af8c24e4cdc5539467e705bb4618b1bc82"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2024/10/tenneco-expands-hydrogen-internal-combustion-engine-h2-ice-testing-capabilities-to-meet-growing-demand",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2024/10/tenneco-expands-hydrogen-internal-combustion-engine-h2-ice-testing-capabilities-to-meet-growing-demand",
+      "id": "6485b07dcf04c7c991f06484389c9932058fbf6c"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2024/10/tenneco-systems-protection-business-marks-100-years-of-innovation-with-global-celebration",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2024/10/tenneco-systems-protection-business-marks-100-years-of-innovation-with-global-celebration",
+      "id": "b021e149ca8edd6b7260bfebfe8cdae55f285c34"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2024/12/monroe-ride-solutions-wins-the-global-digital-transformation-of-the-year-award",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2024/12/monroe-ride-solutions-wins-the-global-digital-transformation-of-the-year-award",
+      "id": "d6324283092e7d6edd670e7e63c1f32b7ffafd1c"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2025/01/tenneco-completes-divestment-of-oehlins-racing-to-brembo",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2025/01/tenneco-completes-divestment-of-oehlins-racing-to-brembo",
+      "id": "63752b3b2dcf80a88819733ab2d675ec2a8282c6"
+    },
+    {
+      "url": "https://www.tenneco.com/news-and-features/newsroom/current-news/2025/02/tenneco-announces-strategic-investment-to-accelerate-growth",
+      "source": "CRAWL",
+      "targetPath": "/news-and-features/newsroom/current-news/2025/02/tenneco-announces-strategic-investment-to-accelerate-growth",
+      "id": "1bb53105db51e722d6913b990ca231b3ea38ef4d"
+    },
+    {
+      "url": "https://www.tenneco.com/privacy-statement",
+      "source": "CRAWL",
+      "targetPath": "/privacy-statement",
+      "id": "233cda7011b1e8ba0aaadd516e2b2fb3dd56adda"
+    },
+    {
+      "url": "https://www.tenneco.com/privacy-statement/california-consumer-privacy-statement",
+      "source": "CRAWL",
+      "targetPath": "/privacy-statement/california-consumer-privacy-statement",
+      "id": "3d05b5b08ef6b6177e26064fbf49402030e57f36"
+    },
+    {
+      "url": "https://www.tenneco.com/privacy-statement/cctv-privacy-notice",
+      "source": "CRAWL",
+      "targetPath": "/privacy-statement/cctv-privacy-notice",
+      "id": "93aac6e3d8875d403bd7184ac14d0d5d59a184ed"
+    },
+    {
+      "url": "https://www.tenneco.com/search-results",
+      "source": "CRAWL",
+      "targetPath": "/search-results",
+      "id": "36a1caeaf526bf1f0a56b5fcbd61048ebd05fe8d"
+    },
+    {
+      "url": "https://www.tenneco.com/sitemap",
+      "source": "CRAWL",
+      "targetPath": "/sitemap",
+      "id": "27fa595b2f07fc3a03e410282cfe862202a993d3"
+    },
+    {
+      "url": "https://www.tenneco.com/slavery-and-human-trafficking",
+      "source": "CRAWL",
+      "targetPath": "/slavery-and-human-trafficking",
+      "id": "18747c153792ef76b035f39dc6c18585d8891f97"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions",
+      "source": "CRAWL",
+      "targetPath": "/solutions",
+      "id": "0e02d32b04e73c69639207ac7ba3812267ecf23f"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/clean-air",
+      "source": "CRAWL",
+      "targetPath": "/solutions/clean-air",
+      "id": "3fa500703c937e4b60af89e0ea87acd8c1862de0"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/clean-air/cstu",
+      "source": "CRAWL",
+      "targetPath": "/solutions/clean-air/cstu",
+      "id": "1f14268ec6debcebf2373538b507a8c6daaf3463"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/performance-solutions",
+      "source": "CRAWL",
+      "targetPath": "/solutions/performance-solutions",
+      "id": "761c0d8c1852ac6781f488e1077e18307a37c039"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/performance-solutions/braking",
+      "source": "CRAWL",
+      "targetPath": "/solutions/performance-solutions/braking",
+      "id": "b453f479604dd579e582243c3a9b3c4181848b7c"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/performance-solutions/clevite-elastomers",
+      "source": "CRAWL",
+      "targetPath": "/solutions/performance-solutions/clevite-elastomers",
+      "id": "01195039e1564ec2c98c4edf5346e04b62573b75"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain",
+      "id": "aa68423212602709df2c244b8b1e401bfeed1ba9"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/daros",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/daros",
+      "id": "55ab4bb59fd7cd680a419f3369cda85a850c72d5"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine",
+      "id": "e32494badf277718bed08a780c53b689b9d93247"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine/lbe-bearings",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine/lbe-bearings",
+      "id": "146d6dd194cfbe1b780a5da7eea1f738b2225d52"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine/lbe-industrial-ignition",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine/lbe-industrial-ignition",
+      "id": "e2f6aedf7d1a950a9ab531fc89f790a696cf1752"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine/lbe-piston-and-sealing-rings",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine/lbe-piston-and-sealing-rings",
+      "id": "bfae0ba8b8cb7bad2ad4126ac5a6c4f47dc2e945"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine/lbe-piston-and-sealing-rings/goetze-piston-rings",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine/lbe-piston-and-sealing-rings/goetze-piston-rings",
+      "id": "8e837b349849f7ce40bf2ac4a14672af7473063d"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine/lbe-pistons",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine/lbe-pistons",
+      "id": "f94fd0ee631fae3be0b5239d1376cee6ae5570e1"
+    },
+    {
+      "url": "https://www.tenneco.com/solutions/powertrain/large-bore-engine/lbe-valve-seats-guides",
+      "source": "CRAWL",
+      "targetPath": "/solutions/powertrain/large-bore-engine/lbe-valve-seats-guides",
+      "id": "8b79867228f64cfda07c9e82f287a0fc077b1713"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers",
+      "source": "CRAWL",
+      "targetPath": "/suppliers",
+      "id": "1198c06002dc5b7ca2fd7cf38fdc3cfed8c8f6d7"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/c-tpat-trade-best-practices",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/c-tpat-trade-best-practices",
+      "id": "d98b46dc2ea40f25b03246b56e69e210b04c1e44"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/restricted-substances",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/restricted-substances",
+      "id": "c2737203c80345d8ae9402d6719b2895489645ff"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/supplier-code-of-conduct",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/supplier-code-of-conduct",
+      "id": "e09980e9d526de93d9c9fea736bf183377aa1a5c"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/supplier-diversity",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/supplier-diversity",
+      "id": "253dce897eec0c04ea72b94c34045606e7ba59f8"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/supplier-resource-center",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/supplier-resource-center",
+      "id": "4a9889c99c1d850d7c90cb6b935c491571e0e451"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/supplier-resource-center/driv-sales-and-use-tax",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/supplier-resource-center/driv-sales-and-use-tax",
+      "id": "5df7007cdd6cd7cf14381a3e82189fbead1175cc"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/supplier-resource-center/pt-sales-and-use-tax",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/supplier-resource-center/pt-sales-and-use-tax",
+      "id": "0e96c99c4d6ff563b2078b2e05ed473894bf2348"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/supplier-resource-center/pt-shipping-and-tax",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/supplier-resource-center/pt-shipping-and-tax",
+      "id": "f6d048162a969dc5c8e993630dbeb0e900d57b58"
+    },
+    {
+      "url": "https://www.tenneco.com/suppliers/terms-and-conditions",
+      "source": "CRAWL",
+      "targetPath": "/suppliers/terms-and-conditions",
+      "id": "9c3eaf80fb58d0b4f49d07b4eee1df0e9dcd85a2"
+    },
+    {
+      "url": "https://www.tenneco.com/terms-and-conditions",
+      "source": "CRAWL",
+      "targetPath": "/terms-and-conditions",
+      "id": "d9436526ff96399ac167e5b69641095084951a46"
+    }
+  ],
+  "crawlOptions": {
+    "timeout": 64800000,
+    "inclusionPatterns": [],
+    "exclusionPatterns": [],
+    "limit": -1,
+    "sameDomain": true,
+    "keepHash": false,
+    "strategy": "crawl",
+    "logger": {},
+    "strategiesAttempted": [
+      "CRAWL"
+    ]
+  },
+  "extractionErrors": [
+    {
+      "url": "https://www.tenneco.com/content/tenneco/language-masters/es",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://www.tenneco.com/content/tenneco/language-masters/fr",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://www.tenneco.com/docs/default-source/supplier-documents/shipping-instructions-fm-wiesbaden-2020-(german-version)_v3-finalf0de3bdbe38a43a7b4d866f4a5cd9439.doc?sfvrsn&",
+      "status": "404 Not Found"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/pdf/supplier-documents/APQP%20Tracker%20Template%20rev%208a.xlsm.coredownload.xlsm",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/capacity-verification-form-rev-9a.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/certified-stock-tag.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2410-Global-Corrective-Action-Report.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2410-launch-containment-form-ichart.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/launch-containment-label-green.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/pcn---process-change-and-deviation-notification-worksheet.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/ppap-guide-and-verification-checklist%202024-12-13.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/apqp-tracker.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/tenneco-security-and-privacy-threshold-assessment-v1-51_final_6-2022.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/tenneco-process-change-notification-worksheet.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/Tenneco%20Unilateral%20NDA%20(07-2022).doc.coredownload.doc",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/vendor-tooling-registration-form-v0-(1).xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/APQP%20tracker%20v2.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/Capacity%20verification%20form%20v3.xlsm.coredownload.xlsm",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/contamination_audit.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2411-Supplier%20Design%20Specification%20Technical%20Review%20Template%20v3.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2503_MRS_8D_template_supplier.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2411-I%20Chart%20launch%20containment%20v2.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/tenneco_inboundlogisitcsprotocol_processflow.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/tenneco_inboundlogisitcsprotocol.doc.coredownload.doc",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2411-Process%20Change%20Notification%20Worksheet%20v2.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/tenneco-global-ppap-guide-and-verification-checklist-june-06-19-2023.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/supplier_datasecurity_selfassessment.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/ten_supplier_suggestion_form.doc.coredownload.doc",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/2411-Vendor%20Tooling%20Registration%20Form%20v1.xlsx.coredownload.xlsx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/supplier-restricted-substances-certification-form.docx.coredownload.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/PT%20Supplier%20COC%20Certification%20Form%20-%20Nov.%202023.docx.coredownload.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/ppt/supplier-documents/ppap_sample_labels.ppt.coredownload.ppt",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/supplier-code-of-conduct-certification-form.docx.coredownload.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/Tenneco-Supplier-Requirements-Manual-Certification-Form.docx.coredownload.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/supplier-global-terms-and-conditions-certification-form.docx.coredownload.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/tenneco-supplier-deviation-request-form.docx.coredownload.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/Supplier%20Profile.xls.coredownload.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/default-document-library/Walker%20Limited.%20Tax%20Strategy%202023.docx",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/excel/supplier-documents/tenneco-chemical-and-material-black-and-grey-list-2021_v1.xls",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.tenneco.com/content/dam/tenneco/doc/word/supplier-documents/tenneco_supply_chain_security_questionnaire_030221.docx",
+      "status": "content type is not text/html"
+    }
+  ]
+}

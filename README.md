@@ -1,11 +1,11 @@
-# aemy-test-sta-demo
+# gabrielpoalelungi-cola-sta
 
 This is a project created by AEMY.
 
 ## Environments
 
-- Preview: https://main--aemy-test-sta-demo--gabrielpoalelungi.aem.page/
-- Live: https://main--aemy-test-sta-demo--gabrielpoalelungi.aem.live/
+- Preview: https://main--gabrielpoalelungi-cola-sta--aemdemos.aem.page/
+- Live: https://main--gabrielpoalelungi-cola-sta--aemdemos.aem.live/
 
 ## Installation
 
@@ -23,4 +23,4 @@ npm run lint
 
 1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
 1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000/`)
-1. Open the `aemy-test-sta-demo` directory in your favorite IDE and start coding :)
+1. Open the `gabrielpoalelungi-cola-sta` directory in your favorite IDE and start coding :)
