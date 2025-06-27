@@ -1,3 +1,5 @@
+/* --- Carousel Core Styles --- */
+
 .carousel .carousel-slides-container {
   position: relative;
 }
@@ -32,6 +34,11 @@
   min-height: min(50vw, calc(100dvh - var(--header-height)));
 }
 
+.carousel.carousel14 .carousel-slide {
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
   align-items: center;
 }
@@ -56,7 +63,7 @@
   margin: 68px;
   padding: 16px;
   color: white;
-  background-color: rgba(19 19 19 / 75%);
+  background-color: rgb(19 19 19 / 75%);
   position: relative;
   width: var(--slide-content-width, auto);
 }
@@ -107,13 +114,13 @@
   margin: 0;
   border-radius: 50%;
   padding: 0;
-  background-color: rgba(19 19 19 / 25%);
+  background-color: rgb(19 19 19 / 25%);
   transition: background-color 0.2s;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
-  background-color: rgba(19 19 19 / 75%);
+  background-color: rgb(19 19 19 / 75%);
 }
 
 .carousel .carousel-navigation-buttons button::after {
@@ -149,5 +156,148 @@
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
+  }
+}
+
+.carousel.carousel14 {
+  background: #f5f8fb;
+}
+
+/* Hide navigation buttons */
+.carousel.carousel14 .carousel-navigation-buttons {
+  display: none;
+}
+
+/* Style the carousel content container */
+.carousel.carousel14 .carousel-slide-content {
+  background: none;
+  color: #131313;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+/* QUOTE MARK ICON: Place above the quote text */
+.carousel.carousel14 .carousel-slide-content p {
+  position: relative;
+  margin: 0 0 22px;
+  font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: #131313;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Insert blue quote mark icon */
+.carousel.carousel14 .carousel-slide-content p::before {
+  display: block;
+  margin: 0 auto 18px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  background: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 10h-6v8h6v8h-12v-8c0-4.418 3.582-8 8-8h4v8zM34 10h-6v8h6v8h-12v-8c0-4.418 3.582-8 8-8h4v8z' fill='%23173ea6'/%3E%3C/svg%3E") no-repeat center/contain;
+  content: '';
+}
+
+/* Style the quote text (strong is the main quote) */
+.carousel.carousel14 .carousel-slide-content p strong {
+  display: block;
+  font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  font-size: 2.2rem;
+  color: #131313;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+/* Style the author line after <br> (the text node after br) */
+.carousel.carousel14 .carousel-slide-content p br + * {
+  display: block;
+  margin-top: 18px;
+  color: #173ea6;
+  font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+/* PAGE INDICATORS */
+.carousel.carousel14 .carousel-slides-container {
+  position: relative;
+}
+
+.carousel.carousel14 .carousel-slide-indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  background: none;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.carousel.carousel14 .carousel-slide-indicator {
+  margin: 0 4px;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: none;
+  border: 2px solid #173ea6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+  display: inline-block;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button:focus-visible {
+  outline: 2px solid #173ea6;
+  outline-offset: 2px;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button:disabled,
+.carousel.carousel14 .carousel-slide-indicator button[aria-current="true"] {
+  background: #173ea6;
+  border-color: #173ea6;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button:not(:disabled, [aria-current="true"]) {
+  background: transparent;
+  border-color: #173ea6;
+}
+
+@media (width <= 700px) {
+  .carousel.carousel14 .carousel-slide-content p strong {
+    font-size: 1.3rem;
+  }
+
+  .carousel.carousel14 .carousel-slide-content {
+    max-width: 95vw;
+  }
+
+  .carousel.carousel14 .carousel-slide-indicators {
+    bottom: 12px;
   }
 }
