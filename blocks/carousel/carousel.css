@@ -154,204 +154,157 @@
 }
 
 .carousel.carousel14 {
+  background: #f5f8fa;
   position: relative;
-  background: #f5f8fb;
 }
+
+/* Hide navigation buttons */
 .carousel.carousel14 .carousel-navigation-buttons {
   display: none;
 }
 
+/* Center slide content and style */
 .carousel.carousel14 .carousel-slide {
-  background: none;
-  min-height: 0;
-  justify-content: flex-start;
+  align-items: center !important;
+  justify-content: flex-start !important;
 }
 
 .carousel.carousel14 .carousel-slide .carousel-slide-content {
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
   padding: 0;
   background: none;
   color: #000;
-  box-shadow: none;
-  width: 100%;
-  max-width: 820px;
   text-align: center;
-  font-family: var(--heading-font-family);
+  max-width: 820px;
+  width: 100%;
+  box-shadow: none;
 }
 
 .carousel.carousel14 .carousel-slide .carousel-slide-content p {
-  margin: 0;
-  font-size: 2.5rem;
+  font-family: var(--heading-font-family);
+  font-size: 2.6rem;
   font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 32px 0;
   letter-spacing: 0;
-  line-height: 1.12;
 }
 
 .carousel.carousel14 .carousel-slide .carousel-slide-content p strong {
   display: block;
   font-family: var(--heading-font-family);
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 36px;
+  margin-bottom: 18px;
 }
 
-.carousel.carousel14 .carousel-slide .carousel-slide-content br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p {
-  margin-bottom: 36px;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p {
-  position: relative;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p::before {
-  display: block;
-  margin: 0 auto 28px auto;
-  width: 36px;
-  height: 36px;
-  background: url('data:image/svg+xml;utf8,<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" fill="none"/><path d="M12 24V14.5C12 11.46 13.8954 9 17 9V12C15.4477 12 14 13.18 14 14.5V16H18V24H12ZM24 24V14.5C24 11.46 25.8954 9 29 9V12C27.4477 12 26 13.18 26 14.5V16H30V24H24Z" fill="%23004aad"/></svg>') no-repeat center/contain;
-  content: "";
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p strong + br + span,
-.carousel.carousel14 .carousel-slide .carousel-slide-content p br + span {
-  display: none !important;
+.carousel.carousel14 .carousel-slide .carousel-slide-content p br + span,
+.carousel.carousel14 .carousel-slide .carousel-slide-content p br + strong {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .carousel.carousel14 .carousel-slide .carousel-slide-content p {
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .carousel.carousel14 .carousel-slide .carousel-slide-content p br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p strong + br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p strong + br + span {
-  display: none !important;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p {
-  margin-bottom: 16px;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + br,
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + span {
-  display: none !important;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + span {
-  display: none !important;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p strong + br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p strong + br + span {
-  display: none !important;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p {
-  margin-bottom: 16px;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + br,
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + span {
-  display: none !important;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + span {
-  display: none !important;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content p + br {
-  display: none;
-}
-
-.carousel.carousel14 .carousel-slide .carousel-slide-content br {
-  display: none;
+  display: none; /* Remove line-breaks for CEO attribution styling */
 }
 
 /* CEO attribution styling */
-.carousel.carousel14 .carousel-slide .carousel-slide-content p br + span,
-.carousel.carousel14 .carousel-slide .carousel-slide-content br + strong + span {
-  display: inline-block;
-  font-family: var(--body-font-family);
-  font-size: 1rem;
-  color: #004aad;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 18px;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.carousel.carousel14 .carousel-slides-container {
+.carousel.carousel14 .carousel-slide .carousel-slide-content p {
   position: relative;
-  padding-bottom: 48px;
 }
 
+.carousel.carousel14 .carousel-slide .carousel-slide-content p::after {
+  display: block;
+  margin: 32px auto 0 auto;
+  font-family: var(--body-font-family);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1551b2;
+}
+
+.carousel.carousel14 .carousel-slide .carousel-slide-content p strong + br + * {
+  display: block;
+  font-family: var(--body-font-family);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1551b2;
+  margin-top: 32px;
+}
+
+/* Quotation mark icon styling */
+.carousel.carousel14 .carousel-slide .carousel-slide-content::before {
+  display: block;
+  margin: 0 auto 32px auto;
+  text-align: center;
+  font-size: 3.3rem;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  color: #1551b2;
+  line-height: 1;
+  /* Use an open quote character, as pseudo-content is forbidden, so must rely on markup for actual icon */
+}
+
+/* Adjust slide indicators positioning and style */
 .carousel.carousel14 .carousel-slide-indicators {
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  bottom: 38px;
   background: none;
-  padding: 0;
-  margin: 0;
-  gap: 0 12px;
   justify-content: center;
-  width: auto;
-  box-shadow: none;
+  gap: 0 18px;
+  padding: 0;
+  z-index: 10;
 }
 
 .carousel.carousel14 .carousel-slide-indicator {
-  margin: 0 4px;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel.carousel14 .carousel-slide-indicator button {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  margin: 0;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: #fff;
-  border: 1.5px solid #004aad;
+  border: 2px solid #1551b2;
+  background: transparent;
   box-sizing: border-box;
-  transition: background 0.2s, border 0.2s;
+  margin: 0 4px;
+  transition: background 0.2s, border-color 0.2s;
   display: inline-block;
 }
 
 .carousel.carousel14 .carousel-slide-indicator button:disabled,
 .carousel.carousel14 .carousel-slide-indicator button[aria-current="true"] {
-  background: #004aad;
-  border-color: #004aad;
+  background: #1551b2;
+  border-color: #1551b2;
 }
 
-.carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not([aria-current="true"]) {
-  background: #fff;
-  border-color: #004aad;
+.carousel.carousel14 .carousel-slide-indicator button:hover,
+.carousel.carousel14 .carousel-slide-indicator button:focus-visible {
+  border-color: #003380;
+}
+
+@media (max-width: 600px) {
+  .carousel.carousel14 .carousel-slide .carousel-slide-content {
+    margin: 36px auto 0 auto;
+    font-size: 1.25rem;
+    max-width: 97vw;
+  }
+  .carousel.carousel14 .carousel-slide-indicators {
+    bottom: 18px;
+  }
 }
 
 .carousel.carousel14 {
+  background: #f5f8fa;
   position: relative;
-  background: #f5f8fb;
 }
