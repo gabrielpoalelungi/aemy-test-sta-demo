@@ -1,5 +1,8 @@
 
 
+/* ==== BASE CSS ==== */
+
+
 
 .carousel .carousel-slides-container {
   position: relative;
@@ -394,6 +397,79 @@
 }
 
 /* ======= MERGED SELECTOR .carousel.carousel14 ======= */
+
+
+/* ==== GENERATED CSS ==== */
+
+.carousel.carousel14 .carousel-navigation-buttons {
+  display: none;
+}
+
+/* Indicators: bottom-center, spaced, classic dot style */
+.carousel.carousel14 .carousel-slide-indicators {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 18px;
+  margin-top: 18px;
+  padding: 0;
+  background: none;
+  min-height: 18px;
+  line-height: 0;
+  box-shadow: none;
+}
+
+/* Indicator dot style: 8px circle, blue fill for active, hollow for inactive */
+.carousel.carousel14 .carousel-slide-indicator button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid #0036b2;
+  background: none;
+  margin: 0 0;
+  box-sizing: border-box;
+  transition: background 0.2s, border-color 0.2s;
+  padding: 0;
+  display: inline-block;
+}
+
+/* Active: solid blue */
+.carousel.carousel14 .carousel-slide-indicator button:disabled,
+.carousel.carousel14 .carousel-slide-indicator button.active,
+.carousel.carousel14 .carousel-slide-indicator button[aria-current="true"] {
+  background: #0036b2;
+  border-color: #0036b2;
+}
+
+/* Inactive: white, blue border */
+.carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]) {
+  background: #fff;
+  border-color: #0036b2;
+}
+
+/* On hover/focus (not active): blue border, light gray fill */
+.carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]):hover,
+.carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]):focus-visible {
+  background: #f5f8fa;
+  border-color: #0036b2;
+}
+
+/* Responsive: smaller dots and gap on small screens */
+@media (max-width: 700px) {
+  .carousel.carousel14 .carousel-slide-indicators {
+    margin-top: 10px;
+    gap: 0 10px;
+    min-height: 12px;
+  }
+  .carousel.carousel14 .carousel-slide-indicator button {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+
+/* ==== MERGED SELECTOR .carousel.carousel14 ==== */
 .carousel.carousel14 {
   background: #f5f8fa;
   position: relative;
