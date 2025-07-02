@@ -1,5 +1,6 @@
 
 
+
 /* ==== BASE CSS ==== */
 
 
@@ -405,36 +406,46 @@
   display: none;
 }
 
-/* Indicators: bottom-center, spaced, classic dot style */
+/* Position indicators at bottom center, just below the attribution */
+.carousel.carousel14 .carousel-slides-container {
+  position: relative;
+}
 .carousel.carousel14 .carousel-slide-indicators {
   position: static;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 18px;
-  margin-top: 18px;
+  gap: 0 16px;
+  margin-top: 12px;
   padding: 0;
   background: none;
-  min-height: 18px;
+  min-height: 24px;
+  z-index: 2;
   line-height: 0;
   box-shadow: none;
 }
 
-/* Indicator dot style: 8px circle, blue fill for active, hollow for inactive */
+/* Dot style: circular, blue for active, hollow for inactive */
 .carousel.carousel14 .carousel-slide-indicator button {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 1.5px solid #0036b2;
   background: none;
-  margin: 0 0;
+  margin: 0 2px;
   box-sizing: border-box;
   transition: background 0.2s, border-color 0.2s;
   padding: 0;
   display: inline-block;
 }
 
-/* Active: solid blue */
+/* Inactive indicator: white fill, blue border */
+.carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]) {
+  background: none;
+  border-color: #0036b2;
+}
+
+/* Active indicator: solid blue fill, blue border */
 .carousel.carousel14 .carousel-slide-indicator button:disabled,
 .carousel.carousel14 .carousel-slide-indicator button.active,
 .carousel.carousel14 .carousel-slide-indicator button[aria-current="true"] {
@@ -442,13 +453,7 @@
   border-color: #0036b2;
 }
 
-/* Inactive: white, blue border */
-.carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]) {
-  background: #fff;
-  border-color: #0036b2;
-}
-
-/* On hover/focus (not active): blue border, light gray fill */
+/* On hover/focus (not active): blue border, white fill */
 .carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]):hover,
 .carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]):focus-visible {
   background: #f5f8fa;
@@ -458,13 +463,13 @@
 /* Responsive: smaller dots and gap on small screens */
 @media (max-width: 700px) {
   .carousel.carousel14 .carousel-slide-indicators {
-    margin-top: 10px;
-    gap: 0 10px;
-    min-height: 12px;
+    margin-top: 8px;
+    gap: 0 8px;
+    min-height: 14px;
   }
   .carousel.carousel14 .carousel-slide-indicator button {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
   }
 }
 
