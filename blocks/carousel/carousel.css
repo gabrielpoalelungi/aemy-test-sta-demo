@@ -1,5 +1,6 @@
 
 
+
 .carousel .carousel-slides-container {
   position: relative;
 }
@@ -308,19 +309,16 @@
   }
 }
 
-/* merged selector below */
 .carousel.carousel14 {
   background: #f5f8fa;
   position: relative;
 }
 
-/* ======= GENERATED CSS BELOW ======= */
-
 .carousel.carousel14 .carousel-navigation-buttons {
   display: none;
 }
 
-/* Indicators at bottom center of slides container */
+/* Position indicators at bottom center, just below the attribution */
 .carousel.carousel14 .carousel-slides-container {
   position: relative;
 }
@@ -328,7 +326,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 28px;
+  bottom: 16px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -339,14 +337,15 @@
   padding: 0;
   z-index: 2;
   line-height: 0;
+  box-shadow: none;
 }
 
-/* Indicator button base */
+/* Dot style: circular, blue for active, hollow for inactive */
 .carousel.carousel14 .carousel-slide-indicator button {
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 2px solid #0036b2;
+  border: 1.5px solid #0036b2;
   background: none;
   margin: 0 2px;
   box-sizing: border-box;
@@ -357,7 +356,7 @@
 
 /* Inactive indicator: white fill, blue border */
 .carousel.carousel14 .carousel-slide-indicator button:not(:disabled):not(.active):not([aria-current="true"]) {
-  background: #f5f8fa;
+  background: none;
   border-color: #0036b2;
 }
 
@@ -376,23 +375,22 @@
   background: #f5f8fa;
 }
 
-/* Reduce indicator size on small screens */
+/* Responsive: smaller dots and spacing on small screens */
 @media (max-width: 700px) {
   .carousel.carousel14 .carousel-slide-indicators {
-    bottom: 16px;
-    min-height: 16px;
+    bottom: 10px;
+    min-height: 14px;
     gap: 0 10px;
   }
   .carousel.carousel14 .carousel-slide-indicator button {
-    width: 9px;
-    height: 9px;
+    width: 7px;
+    height: 7px;
   }
 }
 
-/* Remove any background/shadow from indicators */
-.carousel.carousel14 .carousel-slide-indicators {
-  background: none;
-  box-shadow: none;
+.carousel.carousel14 {
+  background: #f5f8fa;
+  position: relative;
 }
 
 /* ======= MERGED SELECTOR .carousel.carousel14 ======= */
