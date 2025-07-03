@@ -31,3 +31,36 @@
     order: unset;
   }
 }
+
+.columns.columns44 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 0;
+  width: 100%;
+  background: #fff;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.columns.columns44 > div > div {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.columns.columns44 {
+  background: #fff;
+  border: none;
+  margin: 0;
+  padding: 0;
+}

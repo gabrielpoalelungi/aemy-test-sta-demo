@@ -32,6 +32,12 @@
   min-height: min(50vw, calc(100dvh - var(--header-height)));
 }
 
+.carousel.carousel14 .carousel-slide {
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 360px;
+}
+
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
   align-items: center;
 }
@@ -56,7 +62,7 @@
   margin: 68px;
   padding: 16px;
   color: white;
-  background-color: rgba(19 19 19 / 75%);
+  background-color: rgb(19 19 19 / 75%);
   position: relative;
   width: var(--slide-content-width, auto);
 }
@@ -107,13 +113,13 @@
   margin: 0;
   border-radius: 50%;
   padding: 0;
-  background-color: rgba(19 19 19 / 25%);
+  background-color: rgb(19 19 19 / 25%);
   transition: background-color 0.2s;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
-  background-color: rgba(19 19 19 / 75%);
+  background-color: rgb(19 19 19 / 75%);
 }
 
 .carousel .carousel-navigation-buttons button::after {
@@ -149,5 +155,158 @@
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
+  }
+}
+
+.carousel.carousel14 {
+  position: relative;
+  background: #f5f8fa;
+  min-height: 420px;
+}
+
+.carousel.carousel14 .carousel-slides-container {
+  padding-bottom: 72px;
+}
+
+.carousel.carousel14 .carousel-navigation-buttons {
+  display: none;
+}
+
+.carousel.carousel14 .carousel-slide-content {
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #000;
+  text-align: center;
+  box-shadow: none;
+  width: 100%;
+  max-width: 720px;
+  font-family: roboto-condensed, var(--heading-font-family);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel.carousel14 .carousel-slide-content strong {
+  display: block;
+  font-size: 2.2rem;
+  font-family: roboto-condensed, var(--heading-font-family);
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  text-align: center;
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+.carousel.carousel14 .carousel-slide-content br {
+  display: none;
+}
+
+.carousel.carousel14 .carousel-slide-content p {
+  margin: 0 0 24px;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  color: #0041be;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.carousel.carousel14 .carousel-slide-content p strong {
+  font-family: roboto-condensed, var(--heading-font-family);
+  font-size: 2.2rem;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  display: block;
+}
+
+.carousel.carousel14 .carousel-slide-content p br {
+  display: none;
+}
+
+.carousel.carousel14 .carousel-slide-content::before {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 18px;
+  background: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="rgb(0,47,167)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M13 30c0-8.08 3.54-15.08 8.25-20.08L15.38 6C8.55 13.18 5 21.03 5 30h8zm22 0c0-8.08 3.54-15.08 8.25-20.08L37.38 6C30.55 13.18 27 21.03 27 30h8z"/></svg>');
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.carousel.carousel14 .carousel-slide-indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 28px;
+  z-index: 2;
+  background: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0 18px;
+  line-height: 0;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: none;
+  border: 2px solid #1d232a;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  transition: border-color 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button:disabled,
+.carousel.carousel14 .carousel-slide-indicator button[aria-current="true"] {
+  background: #0041be;
+  border-color: #0041be;
+}
+
+.carousel.carousel14 .carousel-slide-indicator button:hover,
+.carousel.carousel14 .carousel-slide-indicator button:focus-visible {
+  border-color: #0041be;
+}
+
+@media (width <= 700px) {
+  .carousel.carousel14 .carousel-slide-content {
+    font-size: 1.25rem;
+    max-width: 90vw;
+  }
+
+  .carousel.carousel14 .carousel-slide-content strong {
+    font-size: 1.25rem;
+  }
+
+  .carousel.carousel14 .carousel-slide-content::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    margin-bottom: 12px;
+  }
+
+  .carousel.carousel14 .carousel-slide-indicators {
+    bottom: 18px;
+    gap: 0 10px;
   }
 }
