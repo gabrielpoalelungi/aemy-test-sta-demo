@@ -1,3 +1,4 @@
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -31,3 +32,15 @@
     order: unset;
   }
 }
+
+.columns.columns44 > div {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: stretch;
+}
+
+.columns.columns44 > div > div {
+  flex: 1 1 0%;
+}
+
