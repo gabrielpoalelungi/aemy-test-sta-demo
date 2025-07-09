@@ -19,6 +19,52 @@
   display: block;
 }
 
+.columns.columns44 {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.columns.columns44 > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  box-sizing: border-box;
+  min-height: 0;
+  box-shadow: none;
+  gap: 0;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.columns.columns44 > div > div {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: none;
+  align-self: stretch;
+  height: auto;
+}
+
+.columns.columns44 > div,
+.columns.columns44 > div > div {
+  line-height: 0;
+  font-size: 0;
+  vertical-align: top;
+  letter-spacing: normal;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
