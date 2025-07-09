@@ -1,3 +1,4 @@
+
 .carousel .carousel-slides-container {
   position: relative;
 }
@@ -149,5 +150,105 @@
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
+  }
+}
+
+.carousel.carousel14 {
+  background: #f4f7fa;
+}
+
+/* Remove the dark background box from the quote block */
+.carousel.carousel14 .carousel-slide .carousel-slide-content {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hide navigation arrows */
+.carousel.carousel14 .carousel-navigation-buttons {
+  display: none;
+}
+
+/* Place the quote icon above the quote with correct spacing */
+.carousel.carousel14 .carousel-slide .carousel-slide-content::before {
+  display: block;
+  width: 48px;
+  height: 38px;
+  margin: 0 auto 32px;
+  background: url('data:image/svg+xml;utf8,<svg width="48" height="38" viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 30C18.3137 30 21 27.3137 21 24V12C21 8.68629 18.3137 6 15 6C11.6863 6 9 8.68629 9 12V24C9 27.3137 11.6863 30 15 30ZM33 30C36.3137 30 39 27.3137 39 24V12C39 8.68629 36.3137 6 33 6C29.6863 6 27 8.68629 27 12V24C27 27.3137 29.6863 30 33 30Z" fill="%23183caf"/></svg>') no-repeat center;
+  background-size: contain;
+  content: "";
+}
+
+/* Center quote text and author, and apply condensed font */
+.carousel.carousel14 .carousel-slide .carousel-slide-content p {
+  font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #131313;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: 0.01em;
+}
+
+.carousel.carousel14 .carousel-slide .carousel-slide-content p strong {
+  font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #131313;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  line-height: 1.13;
+}
+
+/* Style author line below quote */
+.carousel.carousel14 .carousel-slide .carousel-slide-content p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #183caf;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Remove <br> margin */
+.carousel.carousel14 .carousel-slide .carousel-slide-content p br {
+  display: none;
+}
+
+/* Keep indicators close under quote/author */
+.carousel.carousel14 .carousel-slide-indicators {
+  margin-top: 10px;
+  margin-bottom: 0;
+  position: static;
+  background: none;
+}
+
+/* Responsive: increase quote size and spacing on large screens */
+@media (width >= 900px) {
+  .carousel.carousel14 .carousel-slide .carousel-slide-content {
+    max-width: 1000px;
+  }
+
+  .carousel.carousel14 .carousel-slide .carousel-slide-content::before {
+    width: 56px;
+    height: 44px;
+    margin-bottom: 38px;
+  }
+
+  .carousel.carousel14 .carousel-slide .carousel-slide-content p strong {
+    font-size: 2.7rem;
   }
 }
