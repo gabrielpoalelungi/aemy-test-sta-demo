@@ -1,24 +1,20 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Get the li items (tabs)
-  const listItems = element.querySelectorAll(':scope > li');
-  if (!listItems.length) {
-    element.remove();
-    return;
-  }
-  // Header row: single cell with block name
+  // Header must be a single-cell row with the block name
   const headerRow = ['Columns (columns39)'];
-  // Second row: one cell for each tab label (reference the <span> if present, else just the text)
-  const tabCells = Array.from(listItems).map(li => {
-    const span = li.querySelector('span');
-    if (span) return span;
-    return document.createTextNode(li.textContent.trim());
+
+  // Each column is a direct child div
+  const columnDivs = Array.from(element.querySelectorAll(':scope > div'));
+
+  // For each column div, use its main content (here: the image)
+  const contentRow = columnDivs.map(div => {
+    const img = div.querySelector('img');
+    if (img) return img;
+    return div; // fallback in case there is no image
   });
-  // Note: Each row is an array of cells; here, header is [ 'Columns (columns39)' ], second row is [cell1, cell2, ...]
-  const cells = [
-    headerRow,
-    tabCells,
-  ];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Build the table structure according to the block rules
+  const rows = [headerRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

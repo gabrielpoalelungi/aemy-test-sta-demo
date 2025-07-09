@@ -1,69 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Extract the key parts
-  const title = element.querySelector('.text-with-bg__title');
-  const bgDesktop = element.querySelector('.text-with-bg__bg:not(.mobile)');
-  const logo = element.querySelector('.text-with-bg__logo');
-  const content = element.querySelector('.text-with-bg__content');
+  // Header row: matches example exactly
+  const headerRow = ['Hero (hero14)'];
 
-  // -- Header row --
-  // Must match the example header exactly
-  const headerRow = ['Hero'];
-
-  // -- Second row: Background image + logo --
-  // Extract the desktop background image from style attribute
-  let secondRowContent = [];
-  if (bgDesktop && bgDesktop.style && bgDesktop.style.backgroundImage) {
-    const urlMatch = bgDesktop.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
-    if (urlMatch && urlMatch[1]) {
-      const bgImg = document.createElement('img');
-      bgImg.src = urlMatch[1];
-      bgImg.alt = '';
-      secondRowContent.push(bgImg);
+  // Row 2: Background image (optional)
+  // Look for image tag as direct descendant of any child div
+  let bgImg = null;
+  const imgs = element.querySelectorAll('img');
+  for (const img of imgs) {
+    // In this block, a background should be a main image, not decorative
+    if (
+      img.classList.contains('cover-image') ||
+      img.getAttribute('alt') ||
+      img.getAttribute('src')
+    ) {
+      bgImg = img;
+      break;
     }
   }
-  if (logo) {
-    secondRowContent.push(logo);
-  }
-  if (secondRowContent.length === 0) {
-    secondRowContent = [''];
-  }
+  const backgroundRow = [bgImg ? bgImg : ''];
 
-  // -- Third row: Heading, text, CTA --
-  let thirdRowContent = [];
-  // The heading is present outside the colored box, so we display it as a heading
-  if (title) {
-    const h1 = document.createElement('h1');
-    h1.innerHTML = title.innerHTML;
-    thirdRowContent.push(h1);
-  }
-  if (content) {
-    // Description (multiple paragraphs)
-    const desc = content.querySelector('.text-with-bg__desc');
-    if (desc) {
-      // Add each paragraph individually (only element nodes)
-      Array.from(desc.children).forEach(el => {
-        thirdRowContent.push(el);
-      });
-    }
-    // CTA button
-    const cta = content.querySelector('a.button');
-    if (cta) {
-      thirdRowContent.push(cta);
+  // Row 3: Title, subheading, CTA (the main content)
+  // Grab the .container block, which includes all heading+button content
+  let contentCell = '';
+  const containers = element.querySelectorAll(':scope > .w-layout-grid > div');
+  let contentDiv = null;
+  for (const div of containers) {
+    if (div.classList.contains('container')) {
+      contentDiv = div;
+      break;
     }
   }
-  if (thirdRowContent.length === 0) {
-    thirdRowContent = [''];
+  if (contentDiv) {
+    contentCell = contentDiv;
   }
 
-  // Compose table rows per example: header, bg image+logo, content
-  const cells = [
-    headerRow,
-    [secondRowContent],
-    [thirdRowContent]
-  ];
+  const contentRow = [contentCell];
 
+  // Compose the table and replace
+  const cells = [headerRow, backgroundRow, contentRow];
   const table = WebImporter.DOMUtils.createTable(cells, document);
-  // Replace the original element
   element.replaceWith(table);
 }

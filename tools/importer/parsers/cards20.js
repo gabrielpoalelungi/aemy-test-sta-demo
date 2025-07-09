@@ -1,32 +1,33 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the icons/cards section in the provided HTML
-  const iconsBlock = element.querySelector('.icons-block-item');
-  if (!iconsBlock) return;
-  const cardsWrapper = iconsBlock.querySelector('.icons-block-item__icons');
-  if (!cardsWrapper) return;
-  const cardEls = Array.from(cardsWrapper.querySelectorAll(':scope > .icon-item'));
-
-  // Prepare the header row as in the example
-  const rows = [['Cards (cards20)']];
-
-  cardEls.forEach(cardEl => {
-    // First cell: the icon image (can be null)
-    const img = cardEl.querySelector('img');
-
-    // Second cell: Heading and description/content
-    const title = cardEl.querySelector('.icon-item__title');
-    const content = cardEl.querySelector('.icon-item__content');
-    const textCell = [];
-    if (title) textCell.push(title);
-    if (content) textCell.push(content);
-    rows.push([
-      img,
-      textCell.length === 1 ? textCell[0] : textCell
-    ]);
+  // Header should match exactly
+  const headerRow = ['Cards (cards20)'];
+  // Get all card wrapper divs (immediate children)
+  const cardDivs = Array.from(element.querySelectorAll(':scope > div'));
+  const rows = cardDivs.map(card => {
+    // Icon cell: find .icon and take the SVG (reference, not clone)
+    let iconCell = '';
+    const iconWrapper = card.querySelector('.icon');
+    if (iconWrapper) {
+      const svg = iconWrapper.querySelector('svg');
+      if (svg) {
+        iconCell = svg;
+      } else {
+        iconCell = iconWrapper;
+      }
+    }
+    // Text cell: in this markup, it's just the <p>, but if more, collect all direct text elements (headings, paragraphs)
+    const textParts = [];
+    // Heading (optional, not present in this HTML, so we only search for <p>)
+    const p = card.querySelector('p');
+    if (p) textParts.push(p);
+    // If no <p>, cell will be empty but still filled
+    const textCell = textParts.length ? textParts : '';
+    return [iconCell, textCell];
   });
-
-  // Build and replace the table
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    ...rows
+  ], document);
   element.replaceWith(table);
 }

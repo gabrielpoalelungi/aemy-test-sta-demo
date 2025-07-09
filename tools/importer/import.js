@@ -11,63 +11,52 @@
  */
 /* global WebImporter */
 /* eslint-disable no-console */
-import cards1Parser from './parsers/cards1.js';
-import columns10Parser from './parsers/columns10.js';
-import hero5Parser from './parsers/hero5.js';
-import columns6Parser from './parsers/columns6.js';
-import columns4Parser from './parsers/columns4.js';
-import columns3Parser from './parsers/columns3.js';
-import hero8Parser from './parsers/hero8.js';
-import columns9Parser from './parsers/columns9.js';
-import columns13Parser from './parsers/columns13.js';
-import columns12Parser from './parsers/columns12.js';
-import columns16Parser from './parsers/columns16.js';
-import accordion19Parser from './parsers/accordion19.js';
-import columns2Parser from './parsers/columns2.js';
-import columns22Parser from './parsers/columns22.js';
-import hero15Parser from './parsers/hero15.js';
-import columns17Parser from './parsers/columns17.js';
-import columns20Parser from './parsers/columns20.js';
-import columns18Parser from './parsers/columns18.js';
+import hero2Parser from './parsers/hero2.js';
+import hero7Parser from './parsers/hero7.js';
+import hero3Parser from './parsers/hero3.js';
+import hero6Parser from './parsers/hero6.js';
+import hero10Parser from './parsers/hero10.js';
+import carousel12Parser from './parsers/carousel12.js';
+import cards4Parser from './parsers/cards4.js';
+import hero13Parser from './parsers/hero13.js';
 import columns11Parser from './parsers/columns11.js';
-import cards28Parser from './parsers/cards28.js';
-import columns7Parser from './parsers/columns7.js';
-import cards29Parser from './parsers/cards29.js';
-import columns24Parser from './parsers/columns24.js';
-import cards23Parser from './parsers/cards23.js';
-import hero35Parser from './parsers/hero35.js';
-import columns21Parser from './parsers/columns21.js';
-import columns26Parser from './parsers/columns26.js';
-import columns36Parser from './parsers/columns36.js';
-import accordion37Parser from './parsers/accordion37.js';
-import accordion32Parser from './parsers/accordion32.js';
-import columns41Parser from './parsers/columns41.js';
-import embedVideo30Parser from './parsers/embedVideo30.js';
+import hero14Parser from './parsers/hero14.js';
+import cards15Parser from './parsers/cards15.js';
+import cards5Parser from './parsers/cards5.js';
+import columns16Parser from './parsers/columns16.js';
+import columns8Parser from './parsers/columns8.js';
+import columns17Parser from './parsers/columns17.js';
+import cards20Parser from './parsers/cards20.js';
+import accordion21Parser from './parsers/accordion21.js';
+import accordion18Parser from './parsers/accordion18.js';
+import cards22Parser from './parsers/cards22.js';
+import hero25Parser from './parsers/hero25.js';
+import carousel24Parser from './parsers/carousel24.js';
+import hero29Parser from './parsers/hero29.js';
+import hero31Parser from './parsers/hero31.js';
+import cards26Parser from './parsers/cards26.js';
+import hero23Parser from './parsers/hero23.js';
+import columns30Parser from './parsers/columns30.js';
+import hero33Parser from './parsers/hero33.js';
+import cards34Parser from './parsers/cards34.js';
+import columns32Parser from './parsers/columns32.js';
+import hero36Parser from './parsers/hero36.js';
+import cards35Parser from './parsers/cards35.js';
+import cards38Parser from './parsers/cards38.js';
+import hero40Parser from './parsers/hero40.js';
+import columns27Parser from './parsers/columns27.js';
 import columns39Parser from './parsers/columns39.js';
-import cards42Parser from './parsers/cards42.js';
-import columns46Parser from './parsers/columns46.js';
-import search31Parser from './parsers/search31.js';
-import cardsNoImages47Parser from './parsers/cardsNoImages47.js';
-import columns48Parser from './parsers/columns48.js';
-import columns49Parser from './parsers/columns49.js';
-import hero51Parser from './parsers/hero51.js';
-import hero50Parser from './parsers/hero50.js';
-import columns52Parser from './parsers/columns52.js';
-import columns44Parser from './parsers/columns44.js';
-import video25Parser from './parsers/video25.js';
-import carousel14Parser from './parsers/carousel14.js';
-import columns53Parser from './parsers/columns53.js';
-import columns45Parser from './parsers/columns45.js';
-import carousel27Parser from './parsers/carousel27.js';
-import search33Parser from './parsers/search33.js';
-import cardsNoImages38Parser from './parsers/cardsNoImages38.js';
-import cards40Parser from './parsers/cards40.js';
+import columns19Parser from './parsers/columns19.js';
+import carousel37Parser from './parsers/carousel37.js';
+import embedVideo1Parser from './parsers/embedVideo1.js';
+import tabs28Parser from './parsers/tabs28.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
 import imageTransformer from './transformers/images.js';
 import linkTransformer from './transformers/links.js';
 import { TransformHook } from './transformers/transform.js';
+import { customParsers, customTransformers, customElements } from './import.custom.js';
 import {
   generateDocumentPath,
   handleOnLoad,
@@ -77,64 +66,57 @@ import {
 
 const parsers = {
   metadata: metadataParser,
-  cards1: cards1Parser,
-  columns10: columns10Parser,
-  hero5: hero5Parser,
-  columns6: columns6Parser,
-  columns4: columns4Parser,
-  columns3: columns3Parser,
-  hero8: hero8Parser,
-  columns9: columns9Parser,
-  columns13: columns13Parser,
-  columns12: columns12Parser,
-  columns16: columns16Parser,
-  accordion19: accordion19Parser,
-  columns2: columns2Parser,
-  columns22: columns22Parser,
-  hero15: hero15Parser,
-  columns17: columns17Parser,
-  columns20: columns20Parser,
-  columns18: columns18Parser,
+  hero2: hero2Parser,
+  hero7: hero7Parser,
+  hero3: hero3Parser,
+  hero6: hero6Parser,
+  hero10: hero10Parser,
+  carousel12: carousel12Parser,
+  cards4: cards4Parser,
+  hero13: hero13Parser,
   columns11: columns11Parser,
-  cards28: cards28Parser,
-  columns7: columns7Parser,
-  cards29: cards29Parser,
-  columns24: columns24Parser,
-  cards23: cards23Parser,
-  hero35: hero35Parser,
-  columns21: columns21Parser,
-  columns26: columns26Parser,
-  columns36: columns36Parser,
-  accordion37: accordion37Parser,
-  accordion32: accordion32Parser,
-  columns41: columns41Parser,
-  embedVideo30: embedVideo30Parser,
+  hero14: hero14Parser,
+  cards15: cards15Parser,
+  cards5: cards5Parser,
+  columns16: columns16Parser,
+  columns8: columns8Parser,
+  columns17: columns17Parser,
+  cards20: cards20Parser,
+  accordion21: accordion21Parser,
+  accordion18: accordion18Parser,
+  cards22: cards22Parser,
+  hero25: hero25Parser,
+  carousel24: carousel24Parser,
+  hero29: hero29Parser,
+  hero31: hero31Parser,
+  cards26: cards26Parser,
+  hero23: hero23Parser,
+  columns30: columns30Parser,
+  hero33: hero33Parser,
+  cards34: cards34Parser,
+  columns32: columns32Parser,
+  hero36: hero36Parser,
+  cards35: cards35Parser,
+  cards38: cards38Parser,
+  hero40: hero40Parser,
+  columns27: columns27Parser,
   columns39: columns39Parser,
-  cards42: cards42Parser,
-  columns46: columns46Parser,
-  search31: search31Parser,
-  cardsNoImages47: cardsNoImages47Parser,
-  columns48: columns48Parser,
-  columns49: columns49Parser,
-  hero51: hero51Parser,
-  hero50: hero50Parser,
-  columns52: columns52Parser,
-  columns44: columns44Parser,
-  video25: video25Parser,
-  carousel14: carousel14Parser,
-  columns53: columns53Parser,
-  columns45: columns45Parser,
-  carousel27: carousel27Parser,
-  search33: search33Parser,
-  cardsNoImages38: cardsNoImages38Parser,
-  cards40: cards40Parser,
+  columns19: columns19Parser,
+  carousel37: carousel37Parser,
+  embedVideo1: embedVideo1Parser,
+  tabs28: tabs28Parser,
+  ...customParsers,
 };
 
 const transformers = {
   cleanup: cleanupTransformer,
   images: imageTransformer,
   links: linkTransformer,
+  ...customTransformers,
 };
+
+// Additional page elements to parse that are not included in the inventory
+const pageElements = [{ name: 'metadata' }, ...customElements];
 
 WebImporter.Import = {
   findSiteUrl: (instance, siteUrls) => (
@@ -172,8 +154,6 @@ WebImporter.Import = {
     .map(({ xpath }) => xpath)),
 };
 
-const pageElements = [{ name: 'metadata' }];
-
 /**
 * Page transformation function
 */
@@ -207,22 +187,32 @@ function transformPage(main, { inventory, ...source }) {
   WebImporter.Import.transform(TransformHook.beforePageTransform, main, { ...source });
 
   const tableBuilder = TableBuilder(WebImporter.DOMUtils.createTable);
-  // transform all block elements using parsers
-  [...pageElements, ...blockElements].forEach(({ element = main, ...pageBlock }) => {
+  // transform all elements using parsers
+  [...blockElements, ...pageElements].forEach((item) => {
+    const { element = main, ...pageBlock } = item;
+    const isBlockElement = blockElements.includes(item);
     const parserName = WebImporter.Import.getParserName(pageBlock);
     const parserFn = parsers[parserName];
     if (!parserFn) return;
     try {
+      let parserElement = element;
+      if (typeof parserElement === 'string') {
+        parserElement = main.querySelector(parserElement);
+      }
       // before parse hook
-      WebImporter.Import.transform(TransformHook.beforeParse, element, { ...source });
+      WebImporter.Import.transform(TransformHook.beforeParse, parserElement, { ...source });
       // parse the element
-      WebImporter.DOMUtils.createTable = tableBuilder.build(parserName);
-      parserFn.call(this, element, { ...source });
-      WebImporter.DOMUtils.createTable = tableBuilder.restore();
+      if (isBlockElement) {
+        WebImporter.DOMUtils.createTable = tableBuilder.build(parserName);
+      }
+      parserFn.call(this, parserElement, { ...source });
+      if (isBlockElement) {
+        WebImporter.DOMUtils.createTable = tableBuilder.restore();
+      }
       // after parse hook
-      WebImporter.Import.transform(TransformHook.afterParse, element, { ...source });
+      WebImporter.Import.transform(TransformHook.afterParse, parserElement, { ...source });
     } catch (e) {
-      console.warn(`Failed to parse block: ${pageBlock.key}`, e);
+      console.warn(`Failed to parse block: ${parserName}`, e);
     }
   });
 }

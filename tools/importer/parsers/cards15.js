@@ -1,44 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as defined in the requirements
+  // Build header row as in the example (with exact casing)
   const headerRow = ['Cards (cards15)'];
-  const rows = [headerRow];
+  const cells = [headerRow];
 
-  // Select all items
-  const items = element.querySelectorAll(':scope > div');
-
-  items.forEach(item => {
-    // Get the image element (reference, not a clone)
-    const img = item.querySelector('img');
-    // Get the content container
-    const content = item.querySelector('.text-image-item__content');
-    if (!img || !content) return; // skip if either is missing
-
-    // Get the title div
-    const titleDiv = content.querySelector('.text-image-item__title');
-    // Get the description div
-    const descDiv = content.querySelector('.text-image-item__description');
-
-    // Prepare content cell
-    const cellContent = [];
-    if (titleDiv) {
-      // Use <strong> to match visual emphasis from example
-      const strong = document.createElement('strong');
-      strong.textContent = titleDiv.textContent.trim();
-      cellContent.push(strong);
+  // Find all direct children <a> (each card)
+  const cardLinks = Array.from(element.querySelectorAll(':scope > a'));
+  cardLinks.forEach((card) => {
+    // Left cell: image element (mandatory)
+    let imageEl = null;
+    const aspectBox = card.querySelector(':scope > .utility-aspect-2x3');
+    if (aspectBox) {
+      const img = aspectBox.querySelector('img');
+      if (img) imageEl = img;
     }
-    if (descDiv) {
-      // Keep paragraphs and all structure in description
-      Array.from(descDiv.childNodes).forEach(node => {
-        if (node.nodeType === 1 || node.nodeType === 3) {
-          // Only add element and text nodes
-          cellContent.push(node);
-        }
-      });
+
+    // Right cell: group tag(s), date, title (in order)
+    const content = [];
+    // Tag and date (usually inside a flex row)
+    const tagRow = card.querySelector(':scope > .flex-horizontal');
+    if (tagRow) {
+      // Tag
+      const tag = tagRow.querySelector('.tag');
+      if (tag) content.push(tag);
+      // Date
+      const date = tagRow.querySelector('.paragraph-sm');
+      if (date) content.push(date);
     }
-    rows.push([img, cellContent]);
+    // Heading as title (mandatory)
+    const heading = card.querySelector('h3, .h4-heading');
+    if (heading) content.push(heading);
+
+    // Only add row if image and at least one text element (to avoid empty rows)
+    if (imageEl && content.length) {
+      cells.push([imageEl, content]);
+    }
   });
 
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Create block table and replace original element
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

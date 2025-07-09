@@ -1,53 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  const headerRow = ['Cards (cards10)'];
-  const cards = Array.from(element.querySelectorAll(':scope > .teaser-item'));
+  // Build the header row exactly as in the example
+  const cells = [['Cards (cards10)']];
 
-  const rows = cards.map(card => {
-    // Image
-    const img = card.querySelector('img');
+  // Get the image grid and all images for the cards
+  const imageGrid = element.querySelector('.grid-layout.desktop-3-column');
+  const images = imageGrid ? Array.from(imageGrid.querySelectorAll('img')) : [];
 
-    // Title (as heading)
-    const titleDiv = card.querySelector('.teaser-item__title');
-    let titleEl = null;
-    if (titleDiv && titleDiv.textContent.trim().length > 0) {
-      titleEl = document.createElement('strong');
-      titleEl.textContent = titleDiv.textContent.trim();
+  // Get the hero text content area
+  const heroContent = element.querySelector('.container.small-container');
+  let heading = null, description = null, ctas = [];
+  if (heroContent) {
+    heading = heroContent.querySelector('h1, h2, h3, h4, h5, h6');
+    description = heroContent.querySelector('p');
+    ctas = Array.from(heroContent.querySelectorAll('a'));
+  }
+
+  // For each image, create a row: [image, text content (only on first card)]
+  images.forEach((img, idx) => {
+    let textCell = '';
+    if (idx === 0) {
+      // Only the first card gets the heading, description, and any CTAs
+      const content = [];
+      if (heading) content.push(heading);
+      if (description) content.push(description);
+      if (ctas.length) {
+        // Group CTAs in a div to keep them together, as shown visually
+        const ctaDiv = document.createElement('div');
+        ctaDiv.append(...ctas);
+        content.push(ctaDiv);
+      }
+      textCell = content.length === 1 ? content[0] : content;
     }
-
-    // Description (may be paragraph)
-    const descDiv = card.querySelector('.teaser-item__desc');
-    let descEls = [];
-    if (descDiv) {
-      descEls = Array.from(descDiv.childNodes).filter(n => {
-        return n.nodeType === 1 || (n.nodeType === 3 && n.textContent.trim());
-      });
-    }
-
-    // CTA (button/link)
-    const cta = card.querySelector('a');
-
-    // Compose content cell
-    const cellContent = [];
-    if (titleEl) cellContent.push(titleEl);
-    if (descEls.length > 0) {
-      if (titleEl) cellContent.push(document.createElement('br'));
-      descEls.forEach((desc, idx) => {
-        if ((titleEl || idx > 0)) cellContent.push(document.createElement('br'));
-        cellContent.push(desc);
-      });
-    }
-    if (cta) {
-      cellContent.push(document.createElement('br'));
-      cellContent.push(cta);
-    }
-
-    return [img, cellContent];
+    cells.push([
+      img,
+      textCell
+    ]);
   });
 
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    ...rows
-  ], document);
+  // Replace the original element with the block table
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }
