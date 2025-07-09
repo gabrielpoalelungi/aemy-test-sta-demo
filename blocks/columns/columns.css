@@ -1,3 +1,4 @@
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -30,4 +31,31 @@
     flex: 1;
     order: unset;
   }
+}
+
+.columns.columns44 {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.columns.columns44 > div {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.columns.columns44 > div > div {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
 }
