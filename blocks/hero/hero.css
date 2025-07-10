@@ -46,48 +46,55 @@
   }
 }
 
+/* Merged .hero.hero2 selector */
 .hero.hero2 {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background: #F7F8F5;
-  min-height: 100vh;
+  background: #fafbf8;
   width: 100vw;
   padding: 0;
+  gap: 36px;
+  min-height: 0;
   box-sizing: border-box;
 }
 
 /* --- Left: Image Column --- */
 .hero.hero2 > div:first-child {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
-  flex: 0 0 600px;
-  width: 600px;
-  min-width: 576px;
-  max-width: 600px;
-  height: 700px;
-  margin-right: 56px;
+  flex: 0 0 560px;
+  width: 560px;
+  min-width: 320px;
+  max-width: 560px;
+  height: 600px;
+  margin: 0;
   box-sizing: border-box;
-  background: #e2e3df;
-  border-radius: 20px;
+  background: none;
+  border-radius: 32px;
   overflow: hidden;
-  position: relative;
+  box-shadow: none;
+  position: static;
+  order: 1;
 }
 
 /* Properly size and show the image */
 .hero.hero2 > div:first-child picture,
 .hero.hero2 > div:first-child img {
-  width: 576px;
-  height: 638px;
-  max-width: 100%;
-  max-height: 100%;
+  width: 560px;
+  height: 600px;
+  min-width: 320px;
+  min-height: 320px;
+  max-width: 560px;
+  max-height: 600px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 32px;
   display: block;
+  background: none;
+  position: static;
   box-shadow: none;
-  background: #e2e3df;
 }
 
 /* --- Right: Text/CTA Column --- */
@@ -95,15 +102,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  flex: 0 0 576px;
-  width: 576px;
-  min-width: 400px;
-  max-width: 576px;
-  height: 638px;
-  padding-left: 0;
+  justify-content: flex-start;
+  flex: 0 1 520px;
+  width: 520px;
+  min-width: 280px;
+  max-width: 520px;
+  height: auto;
   margin-left: 0;
+  background: none;
+  color: #111;
+  margin-top: 36px;
+  padding: 0;
   box-sizing: border-box;
+  order: 2;
 }
 
 /* Always reserve space for image column, even if image fails to load */
@@ -116,76 +127,83 @@
 
 /* Headline styles */
 .hero.hero2 h1 {
-  font-family: Poppins, Orbitron, Arial, sans-serif;
-  color: #000;
-  font-size: 4.2rem;
-  font-weight: 400;
-  line-height: 1.07;
-  letter-spacing: 0.01em;
+  font-family: Outfit, Montserrat, Arial, sans-serif;
+  color: #111;
+  font-size: 76px;
+  font-weight: 200;
+  line-height: 1.06;
+  letter-spacing: 0.04em;
   margin: 0 0 32px;
   width: 100%;
   max-width: 520px;
   text-align: left;
+  background: none;
   overflow-wrap: break-word;
-  white-space: pre-line;
+  white-space: normal;
 }
 
 /* Subheading styles */
-.hero.hero2 p {
-  color: rgb(0 0 0 / 70%);
-  font-size: 1.125rem;
-  max-width: 520px;
-  line-height: 1.5;
-  margin: 0 0 40px;
-  text-align: left;
+.hero.hero2 p:not(.button-container) {
+  color: #444;
+  font-size: 20px;
   font-weight: 400;
+  width: 100%;
+  max-width: 440px;
+  line-height: 1.5;
+  background: none;
+  margin: 0 0 36px;
+  text-align: left;
 }
 
-/* Button row */
-.hero.hero2 p.button-container {
+.hero.hero2 p.button-container,
+.hero.hero2 .button-container {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  max-width: 520px;
+  width: 100%;
+  max-width: 440px;
   margin: 0;
   padding: 0;
 }
 
 /* Button appearance override */
-.hero.hero2 .button {
+.hero.hero2 .button,
+.hero.hero2 .button-container .button {
   background: #fff;
-  border: 1px solid #000;
-  color: #000;
-  font-size: 16px;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 32px;
+  font-size: 18px;
   font-weight: 400;
-  border-radius: 16px;
-  padding: 14px 38px;
-  min-width: 148px;
+  padding: 14px 36px;
+  min-width: 130px;
   margin: 0;
   box-shadow: none;
   outline: none;
-  cursor: pointer;
   text-align: center;
   display: inline-block;
   text-decoration: none;
   line-height: 1.2;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
 }
 
 .hero.hero2 .button:focus,
-.hero.hero2 .button:hover {
-  background: #F7F8F5;
-  color: #000;
+.hero.hero2 .button:hover,
+.hero.hero2 .button-container .button:focus,
+.hero.hero2 .button-container .button:hover {
+  background: #f6f7f4;
+  color: #111;
   border-color: #222;
 }
 
-/* Responsive: stack columns vertically on small screens */
 @media (width <= 1200px) {
   .hero.hero2 {
     flex-direction: column;
     min-height: unset;
     width: 100vw;
     padding: 32px 0;
+    gap: 20px;
   }
 
   .hero.hero2 > div,
@@ -203,12 +221,62 @@
 
   .hero.hero2 > div:last-child {
     align-items: center;
+    margin-top: 18px;
   }
 
   .hero.hero2 h1,
   .hero.hero2 p,
-  .hero.hero2 p.button-container {
+  .hero.hero2 p.button-container,
+  .hero.hero2 .button-container {
+    max-width: 92vw;
+    text-align: center;
+  }
+
+  .hero.hero2 > div:first-child picture,
+  .hero.hero2 > div:first-child img {
+    width: 340px;
+    height: 380px;
+    max-width: 340px;
+    max-height: 380px;
+  }
+
+  .hero.hero2 > div:first-child {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@media (width <= 900px) {
+  .hero.hero2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 0 0;
+  }
+
+  .hero.hero2 > div,
+  .hero.hero2 > div:first-child,
+  .hero.hero2 > div:last-child {
     max-width: 96vw;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero.hero2 > div:last-child {
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .hero.hero2 h1,
+  .hero.hero2 p,
+  .hero.hero2 .button-container,
+  .hero.hero2 p.button-container {
+    max-width: 90vw;
     text-align: center;
   }
 
@@ -218,10 +286,5 @@
     height: auto;
     max-width: 680px;
     max-height: 480px;
-  }
-
-  .hero.hero2 > div:first-child {
-    margin-right: 0;
-    margin-bottom: 32px;
   }
 }
