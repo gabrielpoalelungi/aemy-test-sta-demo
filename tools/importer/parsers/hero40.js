@@ -1,47 +1,69 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Table header as specified in the example
+  // Header row
   const headerRow = ['Hero (hero40)'];
 
-  // Find the background image (the first img.cover-image inside element)
-  let bgImg = element.querySelector('img.cover-image');
-  // Fallback to first img if no cover-image found
-  if (!bgImg) bgImg = element.querySelector('img');
-  // Only add the element reference if it exists
-  const imageRow = [bgImg ? bgImg : ''];
-
-  // Find the container holding the text and cta
-  const container = element.querySelector('.container');
-  // Robustly find the grid that holds content, fallback to container
-  let contentGrid = null;
-  if (container) {
-    contentGrid = container.querySelector('.w-layout-grid') || container;
+  // --- Image row (background image) ---
+  // The background image is in the first .grid-layout > div > img
+  let bgImg = null;
+  const gridDivs = element.querySelectorAll(':scope > .w-layout-grid > div');
+  if (gridDivs && gridDivs.length > 0) {
+    for (const div of gridDivs) {
+      const img = div.querySelector('img');
+      if (img) {
+        bgImg = img;
+        break;
+      }
+    }
   }
-
-  // Collect block content: heading, paragraph, cta button
-  const contentParts = [];
-  if (contentGrid) {
-    // Heading (usually h1)
-    const heading = contentGrid.querySelector('h1');
-    if (heading) contentParts.push(heading);
-    // Paragraph (usually the description)
-    const paragraph = contentGrid.querySelector('p');
-    if (paragraph) contentParts.push(paragraph);
-    // CTA button (usually an <a> in button-group)
-    const cta = contentGrid.querySelector('.button-group a, a.button, a.w-button');
-    if (cta) contentParts.push(cta);
+  // Fallback: if not found, try globally
+  if (!bgImg) {
+    bgImg = element.querySelector('img');
   }
-  // If nothing found, fallback to the container itself (should be rare)
-  const contentRow = [contentParts.length ? contentParts : (container ? container : '')];
+  // Handle absence of image
+  const imageRow = [bgImg || ''];
 
-  // Build the table
+  // --- Content row (title, subheading, cta) ---
+  let contentCellContent = [];
+  if (gridDivs && gridDivs.length > 1) {
+    // There's a nested .grid-layout in this div
+    const innerGrid = gridDivs[1].querySelector('.w-layout-grid');
+    if (innerGrid) {
+      // Get the heading
+      const h1 = innerGrid.querySelector('h1');
+      if (h1) contentCellContent.push(h1);
+      // Get the flex-vertical div (subheading and cta)
+      const flexVertical = innerGrid.querySelector('.flex-vertical');
+      if (flexVertical) {
+        // Get paragraph
+        const p = flexVertical.querySelector('p');
+        if (p) contentCellContent.push(p);
+        // Get button(s)
+        const buttonGroup = flexVertical.querySelector('.button-group');
+        if (buttonGroup) {
+          const links = buttonGroup.querySelectorAll('a');
+          links.forEach(link => contentCellContent.push(link));
+        }
+      }
+    }
+  }
+  // Fallback: If no content found, check for h1/p/a in whole element
+  if (contentCellContent.length === 0) {
+    const h1 = element.querySelector('h1');
+    if (h1) contentCellContent.push(h1);
+    const p = element.querySelector('p');
+    if (p) contentCellContent.push(p);
+    const a = element.querySelector('a');
+    if (a) contentCellContent.push(a);
+  }
+  const contentRow = [contentCellContent.length > 0 ? contentCellContent : ['']];
+
+  // Build table
   const cells = [
-    headerRow,  // 1st row: block name
-    imageRow,   // 2nd row: background image (optional)
-    contentRow  // 3rd row: main content (headings, paragraph, CTA)
+    headerRow,
+    imageRow,
+    contentRow,
   ];
-
-  // Create and insert the block table
   const block = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(block);
 }

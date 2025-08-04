@@ -1,29 +1,39 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row
+  // Header row as specified
   const headerRow = ['Hero (hero29)'];
 
-  // Find the main grid container, which has text and image as children
+  // Find the grid container
   const grid = element.querySelector('.w-layout-grid');
-  if (!grid) return;
-  const gridChildren = Array.from(grid.children);
 
-  // Find the image element (assume first img in grid children)
-  const imgEl = grid.querySelector('img');
-  // Find the text content div (assume first non-img child)
-  const textDiv = gridChildren.find(child => child !== imgEl);
+  // Find the main image (background image)
+  let imageCell = '';
+  if (grid) {
+    // Select the first immediate image child of the grid (not descendant of left column)
+    const images = Array.from(grid.children).filter(child => child.tagName === 'IMG');
+    if (images.length > 0) {
+      imageCell = images[0];
+    }
+  }
 
-  // 2nd row: image (as a cell, or empty string if missing)
-  const imageRow = [imgEl || ''];
+  // Find the text content block (column with all the text and CTA)
+  let textContentCell = '';
+  if (grid) {
+    // Find the first child that's a DIV (not IMG)
+    const contentDiv = Array.from(grid.children).find(child => child.tagName === 'DIV');
+    if (contentDiv) {
+      textContentCell = [contentDiv];
+    }
+  }
 
-  // 3rd row: text content (referencing the original element directly, or empty if missing)
-  const contentRow = [textDiv || ''];
-
-  const rows = [
+  // Build the cells array as 1 column, 3 rows
+  const cells = [
     headerRow,
-    imageRow,
-    contentRow,
+    [imageCell],
+    [textContentCell]
   ];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Create table and replace original element
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

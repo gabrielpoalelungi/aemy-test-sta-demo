@@ -1,38 +1,45 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Table header row (matches example exactly)
+  // Header row
   const headerRow = ['Hero (hero10)'];
 
-  // 2. Background images row: gather all <img> in the image grid
-  const imageGrid = element.querySelector('.ix-hero-scale-3x-to-1x .grid-layout');
-  let images = [];
-  if (imageGrid) {
-    images = Array.from(imageGrid.querySelectorAll('img'));
-  }
-  // All images in one cell, as array
-  const imagesRow = [images];
+  // No background image provided in HTML, so row is empty string
+  const bgRow = [''];
 
-  // 3. Content row: headline, subheading, and CTA(s)
-  const contentContainer = element.querySelector('.ix-hero-scale-3x-to-1x-content .container');
-  let content = [];
-  if (contentContainer) {
-    // Find heading (always h1 for this hero)
-    const heading = contentContainer.querySelector('h1');
-    if (heading) content.push(heading);
-    // Find subheading, usually a p
-    const subheading = contentContainer.querySelector('p');
-    if (subheading) content.push(subheading);
-    // Find all CTAs (all <a> in .button-group)
-    const buttonGroup = contentContainer.querySelector('.button-group');
-    if (buttonGroup) {
-      const buttons = Array.from(buttonGroup.querySelectorAll('a'));
-      if (buttons.length) content.push(...buttons);
-    }
-  }
-  const contentRow = [content];
+  // Get the grid container, will always exist in this structure
+  const grid = element.querySelector('.w-layout-grid');
+  if (!grid) return;
 
-  // Compose the table structure
-  const cells = [headerRow, imagesRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  // Text content left column
+  const textDiv = grid.children[0];
+  // CTA right column
+  const buttonDiv = grid.children[1];
+
+  // Gather content, preserving structure and reference
+  const contentEls = [];
+  // Heading (optional)
+  const heading = textDiv.querySelector('h2, h1, h3, h4, h5, h6');
+  if (heading) contentEls.push(heading);
+  // Subheading/paragraph (optional)
+  // Accept any <p> or <div> (some sites use <div> for subhead)
+  const sub = textDiv.querySelector('p, .subheading, div');
+  // Avoid duplicating heading if 'div' is the same as heading
+  if (sub && (!heading || sub !== heading)) contentEls.push(sub);
+
+  // Collect all CTAs (links/buttons)
+  const ctas = buttonDiv.querySelectorAll('a, button');
+  ctas.forEach(cta => contentEls.push(cta));
+
+  // Compose content row
+  const contentRow = [contentEls];
+
+  // Create block table
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    bgRow,
+    contentRow
+  ], document);
+
+  // Replace element
   element.replaceWith(table);
 }

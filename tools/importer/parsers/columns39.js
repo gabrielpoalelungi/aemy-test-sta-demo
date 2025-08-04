@@ -1,20 +1,25 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header must be a single-cell row with the block name
-  const headerRow = ['Columns (columns39)'];
-
-  // Each column is a direct child div
-  const columnDivs = Array.from(element.querySelectorAll(':scope > div'));
-
-  // For each column div, use its main content (here: the image)
-  const contentRow = columnDivs.map(div => {
-    const img = div.querySelector('img');
-    if (img) return img;
-    return div; // fallback in case there is no image
+  // Extract all immediate children (the columns)
+  const columns = Array.from(element.querySelectorAll(':scope > div'));
+  if (!columns.length) {
+    element.remove();
+    return;
+  }
+  // For each column, extract the content to display (prefer image if only an image, else whole div)
+  const columnCells = columns.map((col) => {
+    if (
+      col.children.length === 1 &&
+      col.firstElementChild.tagName.toLowerCase() === 'img'
+    ) {
+      return col.firstElementChild;
+    }
+    return col;
   });
 
-  // Build the table structure according to the block rules
-  const rows = [headerRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Table header must be a single cell row
+  const headerRow = ['Columns (columns39)'];
+  const cells = [headerRow, columnCells];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

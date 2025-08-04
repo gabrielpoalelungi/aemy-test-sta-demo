@@ -1,72 +1,78 @@
 {
   "originUrl": "https://wknd-trendsetters.webflow.io",
-  "lastCrawled": "https://wknd-trendsetters.webflow.io",
+  "lastCrawled": "https://wknd-trendsetters.webflow.io/",
   "urls": [
     {
-      "url": "https://www.wknd-trendsetters.site/",
+      "url": "https://wknd-trendsetters.webflow.io/",
       "source": "SITEMAPS",
       "targetPath": "/",
-      "id": "1b9ba84f36ee3a519917302a79dfd970725bae31"
+      "id": "0c5f4f7ce8864d7af03165aec812a12465ec27e7"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/blog/fashion-blog-post",
+      "url": "https://wknd-trendsetters.webflow.io/blog/fashion-blog-post",
       "source": "SITEMAPS",
       "targetPath": "/blog/fashion-blog-post",
-      "id": "9b4d89f80efba6f8dbcb1e3da8ea8ffa8771a959"
+      "id": "927dc70b8d0c780767a731f2bd6caece006c8e29"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-culture",
+      "url": "https://wknd-trendsetters.webflow.io/blog/fashion-trends-young-culture",
       "source": "SITEMAPS",
       "targetPath": "/blog/fashion-trends-young-culture",
-      "id": "f5bdda3762c99b21ef3c8f0ca75cb53a00b4e8bf"
+      "id": "24d0372b35ead7342b87543fbbc0be5c45f29630"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/blog/fashion-trends-young-style",
+      "url": "https://wknd-trendsetters.webflow.io/blog/fashion-trends-young-style",
       "source": "SITEMAPS",
       "targetPath": "/blog/fashion-trends-young-style",
-      "id": "be00f351b0490d8b536bf724216d6530c30d5684"
+      "id": "f9857906773da60d7160b16f2db1e2eda0dc6fa1"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/blog/latest-trends-young-casual-fashion",
+      "url": "https://wknd-trendsetters.webflow.io/blog/latest-trends-young-casual-fashion",
       "source": "SITEMAPS",
       "targetPath": "/blog/latest-trends-young-casual-fashion",
-      "id": "971148fccf483ccd07f6ef722bc01c7fb46f61d5"
+      "id": "a50920c91a2d15e1fe29a2ac05b71e5aad8f06fa"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/faq",
+      "url": "https://wknd-trendsetters.webflow.io/faq",
       "source": "SITEMAPS",
       "targetPath": "/faq",
-      "id": "429d6f000c5a6e38a121160bf56d01b17365cffe"
+      "id": "39ea343bee8fc7d4edba337f60c0d7510c9c46cd"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/fashion-insights",
+      "url": "https://wknd-trendsetters.webflow.io/fashion-insights",
       "source": "SITEMAPS",
       "targetPath": "/fashion-insights",
-      "id": "67430c465ff7767e6ae98a0cffa44cd32754a351"
+      "id": "ea7eb16d67cfbaaef306533ddfe915a8f4730012"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
+      "url": "https://wknd-trendsetters.webflow.io/fashion-trends-of-the-season",
       "source": "SITEMAPS",
       "targetPath": "/fashion-trends-of-the-season",
-      "id": "1cfeb2756419a8f56a89a355f5557c3321845adb"
+      "id": "0075ae26aed0fbe118fcf6403913a4675f852a3c"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/fashion-trends-young-adults",
+      "url": "https://wknd-trendsetters.webflow.io/fashion-trends-young-adults",
       "source": "SITEMAPS",
       "targetPath": "/fashion-trends-young-adults",
-      "id": "d2dd722de7842a6232ce56b1307d383ff72c9358"
+      "id": "1ac9604369412593284c7cabedbdb868d4de24e1"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/fashion-trends-young-adults-casual-sport",
+      "url": "https://wknd-trendsetters.webflow.io/fashion-trends-young-adults-casual-sport",
       "source": "SITEMAPS",
       "targetPath": "/fashion-trends-young-adults-casual-sport",
-      "id": "1a14744466075b2d00884f27fb69e2633b6fcb84"
+      "id": "251cb4f5e0d8ca921a8de8c69ca1e62c463c251c"
     },
     {
-      "url": "https://www.wknd-trendsetters.site/latest-trends-young-fashion",
+      "url": "https://wknd-trendsetters.webflow.io/latest-trends-young-fashion",
       "source": "SITEMAPS",
       "targetPath": "/latest-trends-young-fashion",
-      "id": "f5e200536a2c91b06effaf661df0675e13f262b6"
+      "id": "f75120b4c802db89d4360cdfd336761819180703"
+    },
+    {
+      "url": "https://wknd-trendsetters.webflow.io/style-guide",
+      "source": "SITEMAPS",
+      "targetPath": "/style-guide",
+      "id": "58023be5e536317d3c633e68ccd5b69f9bd546e5"
     }
   ],
   "crawlOptions": {

@@ -1,44 +1,38 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row: matches example exactly
-  const headerRow = ['Hero (hero14)'];
+  // Grab the two direct .w-layout-grid > div children
+  const grid = element.querySelector('.w-layout-grid');
+  const gridDivs = grid ? grid.querySelectorAll(':scope > div') : [];
 
-  // Row 2: Background image (optional)
-  // Look for image tag as direct descendant of any child div
-  let bgImg = null;
-  const imgs = element.querySelectorAll('img');
-  for (const img of imgs) {
-    // In this block, a background should be a main image, not decorative
-    if (
-      img.classList.contains('cover-image') ||
-      img.getAttribute('alt') ||
-      img.getAttribute('src')
-    ) {
-      bgImg = img;
-      break;
+  // 1. Background image: first img in the left grid cell
+  let bgImgEl = null;
+  if (gridDivs.length > 0) {
+    bgImgEl = gridDivs[0].querySelector('img');
+  }
+  // If no background image, leave cell blank
+
+  // 2. Content cell (headline, features, CTA, and possibly a foreground image)
+  // The card is inside the right div
+  let contentCellEls = [];
+  if (gridDivs.length > 1) {
+    const card = gridDivs[1].querySelector('.card');
+    if (card) {
+      // We want all card content, including images inside
+      contentCellEls.push(card);
+    } else {
+      // fallback: use the whole right grid cell
+      contentCellEls.push(gridDivs[1]);
     }
-  }
-  const backgroundRow = [bgImg ? bgImg : ''];
-
-  // Row 3: Title, subheading, CTA (the main content)
-  // Grab the .container block, which includes all heading+button content
-  let contentCell = '';
-  const containers = element.querySelectorAll(':scope > .w-layout-grid > div');
-  let contentDiv = null;
-  for (const div of containers) {
-    if (div.classList.contains('container')) {
-      contentDiv = div;
-      break;
-    }
-  }
-  if (contentDiv) {
-    contentCell = contentDiv;
+  } else {
+    contentCellEls = [];
   }
 
-  const contentRow = [contentCell];
-
-  // Compose the table and replace
-  const cells = [headerRow, backgroundRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  // Build the table for Hero (hero14)
+  const cells = [
+    ['Hero (hero14)'],
+    [bgImgEl ? bgImgEl : ''],
+    [contentCellEls.length === 1 ? contentCellEls[0] : contentCellEls]
+  ];
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(block);
 }

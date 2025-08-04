@@ -1,47 +1,53 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Table header matches example: 'Cards (cards38)'
-  const headerRow = ['Cards (cards38)'];
-  // Find the container holding all cards
+  // Get the .container inside the section
   const container = element.querySelector('.container');
   if (!container) return;
-  // Gather all card elements (utility-link-content-block)
-  // Need to handle nested grids as in provided HTML
-  let allCards = [];
-  // Get all .w-layout-grid in container
-  const grids = container.querySelectorAll(':scope > .w-layout-grid');
-  for (const grid of grids) {
-    // Add direct card links from this grid
-    const directCards = Array.from(grid.querySelectorAll(':scope > a.utility-link-content-block'));
-    allCards.push(...directCards);
-    // Look for any nested grids and add card links from them
-    const nestedGrids = grid.querySelectorAll(':scope > .w-layout-grid');
-    for (const subgrid of nestedGrids) {
-      const nestedCards = Array.from(subgrid.querySelectorAll(':scope > a.utility-link-content-block'));
-      allCards.push(...nestedCards);
-    }
+  // Get the first grid, which contains the cards and potentially a nested grid
+  const topGrid = container.querySelector('.grid-layout');
+  if (!topGrid) return;
+
+  // Gather all cards. Some are direct children <a>, some are in a nested grid.
+  // We'll use querySelectorAll(':scope > a, :scope > div > a') to get both top-level and nested ones
+  const directCards = Array.from(topGrid.querySelectorAll(':scope > a.utility-link-content-block'));
+  const nestedGrid = topGrid.querySelector('div.grid-layout');
+  let nestedCards = [];
+  if (nestedGrid) {
+    nestedCards = Array.from(nestedGrid.querySelectorAll(':scope > a.utility-link-content-block'));
   }
-  // Compose table rows: each card gets [image, text block]
-  const rows = [headerRow];
-  allCards.forEach(card => {
-    // image: first <img> inside card (inside aspect-ratio div)
-    let img = card.querySelector('img');
-    // text: Compose array of heading, description, CTA if present
-    let textContent = [];
-    // Find first heading (h2/h3/h4 with possible custom classes)
-    let heading = card.querySelector('h2, h3, h4, .h2-heading, .h4-heading');
-    if (heading) textContent.push(heading);
-    // Description: first <p>
-    let desc = card.querySelector('p');
-    if (desc) textContent.push(desc);
-    // CTA: div.button (keep div as is, do not convert to link, per requirements)
-    let cta = card.querySelector('.button');
-    if (cta) textContent.push(cta);
-    // If nothing, leave empty cell
-    if (textContent.length === 0) textContent = [''];
-    rows.push([img, textContent.length === 1 ? textContent[0] : textContent]);
+  // All cards in order: first direct, then nested
+  const allCards = [...directCards, ...nestedCards];
+
+  // Each card: left cell is the image, right cell is all text/cta
+  const rows = allCards.map(card => {
+    // Extract the first img in the card
+    const img = card.querySelector('img');
+    // Extract heading
+    let heading = card.querySelector('h2, .h2-heading, .h4-heading');
+    // Fallback for heading: sometimes it's just h3 or h4
+    if (!heading) heading = card.querySelector('h3, h4');
+    // Description paragraph
+    const desc = card.querySelector('p');
+    // CTA/button (optional)
+    const cta = card.querySelector('.button');
+
+    // Image cell: reference element or null
+    const imageCell = img || '';
+
+    // Text cell: build array of elements that exist, preserving order
+    const textCellContent = [];
+    if (heading) textCellContent.push(heading);
+    if (desc) textCellContent.push(desc);
+    if (cta) textCellContent.push(cta);
+
+    return [imageCell, textCellContent];
   });
-  // Create the cards table and replace original block
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Build header row, then all card rows
+  const cells = [
+    ['Cards (cards38)'],
+    ...rows
+  ];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }
